@@ -19,7 +19,7 @@ export const Categories = () => {
                 {
                     categories.map((c, index) => {
                         return (
-                            <li onClick={() => onClickCategory(index)}
+                            <li key={index} onClick={() => onClickCategory(index)}
                                 className={activeCategory === index ? 'active' : ''}>{c}</li>
                         )
                     })}

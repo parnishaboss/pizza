@@ -33,7 +33,7 @@ function App() {
                         {
                             state.pizzas.map(p => {
                                 return (
-                                    <PizzaBlock id = {p.id}
+                                    <PizzaBlock key = {p.id}
                                                 imageUrl={p.imageUrl}
                                                 title={p.title}
                                                 price={p.price}
