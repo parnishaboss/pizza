@@ -1,23 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export const PizzaBlock = (props) => {
+    const [activeType, setActiveType] = useState(0)
+    const [activeSize, setSize] = useState(0)
+    const typeNames = ['Тонкое', 'Традиционное']
     return (
         <div className="pizza-block">
             <img
                 className="pizza-block__image"
-                src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                src={props.imageUrl}
                 alt="Pizza"
             />
             <h4 className="pizza-block__title">{props.title}</h4>
             <div className="pizza-block__selector">
                 <ul>
-                    <li className="active">тонкое</li>
-                    <li>традиционное</li>
+                    {
+                        props.types.map(t => {
+                            return (<li
+                                onClick={() => setActiveType(t)}
+                                className={activeType === t ? 'active' : ''}>{typeNames[t]}</li>)
+                        })
+                    }
                 </ul>
                 <ul>
-                    <li className="active">26 см.</li>
-                    <li>30 см.</li>
-                    <li>40 см.</li>
+                    {
+                        props.sizes.map((s , index) => {
+                            return (<li
+                                onClick={() => setSize(index)}
+                                className={activeSize === index ? 'active' : ''}>{s} см.</li>)
+                        })
+                    }
                 </ul>
             </div>
             <div className="pizza-block__bottom">
