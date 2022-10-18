@@ -29,15 +29,9 @@ function App() {
                     <h2 className="content__title">Все пиццы</h2>
                     <div className="content__items">
                         {
-                            state.pizzas.map(p => {
+                            items.map(p => {
                                 return (
-                                    <PizzaBlock key={p.id}
-                                                imageUrl={p.imageUrl}
-                                                title={p.title}
-                                                price={p.price}
-                                                sizes={p.sizes}
-                                                types={p.types}
-                                    />
+                                    <PizzaBlock {...p }/>
                                 )
                             })
 
