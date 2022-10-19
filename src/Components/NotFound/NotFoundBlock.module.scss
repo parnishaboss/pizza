@@ -1,0 +1,13 @@
+.mainBlock {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px;
+  & span {
+    font-size: 64px;
+    letter-spacing: 10px;
+  }
+  .discription {
+    font-size: 22px;
+  }
+}
