@@ -1,7 +1,7 @@
-import {Categories} from "../Components/Categories";
-import {Sort} from "../Components/Sort";
+import {Categories} from "../Components/Categories/Categories";
+import {Sort} from "../Components/Sort/Sort";
 import {Skeleton} from "../Components/Skeleton";
-import {PizzaBlock} from "../Components/PizzaBlock";
+import {PizzaBlock} from "../Components/PizzaBlock/PizzaBlock";
 import React, {useEffect, useState} from 'react';
 
 export const Home = () => {
@@ -17,7 +17,7 @@ export const Home = () => {
             })
     }, [])
     return (
-        <div>
+        <div className="container">
             <div className="content__top">
                 <Categories/>
                 <Sort/>
