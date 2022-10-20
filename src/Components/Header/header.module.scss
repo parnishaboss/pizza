@@ -52,11 +52,12 @@
   }
 
   &__button {
+    width: 210px;
+    height: 51px;
     position: relative;
     display: flex;
     background-color: $orange;
     align-items: center;
-    justify-content: space-evenly;
     color: white;
     line-height: 23px;
     padding: 12px 25px;
@@ -73,9 +74,12 @@
       background-color: darken($orange, 12%);
       transform: translateY(1px);
     }
-
+    & span:first-child {
+      padding-right: 50px;
+    }
     & span {
       color: white;
+      padding-left: 10px;
     }
     &::before{
       position: absolute;
@@ -87,6 +91,7 @@
       left: 50%;
       transform: translate(-50%,50%);
     }
+
     //::before {
     //  position: absolute;
     //  content: '';
