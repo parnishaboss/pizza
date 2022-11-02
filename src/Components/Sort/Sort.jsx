@@ -24,11 +24,11 @@ export const Sort = () => {
                 <div className={s.sort__popup}>
                     <ul>
                         {
-                            sortNames.map((s, index) => {
+                            sortNames.map((sort, index) => {
                                 return (
                                     <li onClick={() => onClickSelect(index)}
                                         key={index}
-                                        className={selected === index ? s.active : ''}>{s}</li>
+                                        className={selected === index ? s.active : ''}>{sort}</li>
                                 )
                             })
                         }

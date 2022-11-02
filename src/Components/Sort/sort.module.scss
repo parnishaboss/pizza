@@ -39,28 +39,30 @@
       li {
         padding: 12px 20px;
         cursor: pointer;
+
         &:hover {
           color: red;
         }
-        //&.active,
-        //&:hover {
-        //  background: rgba(254, 95, 30, 0.05);
-        //}
-        //
-        //&.active {
-        //  font-weight: bold;
-        //  color: $orange;
-        //}
+
+        &.active,
+        &:hover {
+          background: rgba(254, 95, 30, 0.05);
+        }
+
+        &.active {
+          font-weight: bold;
+          color: $orange;
+        }
       }
     }
   }
 
   @media (max-width: 1260px) {
-      padding-left: 20px;
+    padding-left: 20px;
 
-      b {
-        display: none;
-      }
+    b {
+      display: none;
+    }
   }
 
 }
