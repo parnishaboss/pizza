@@ -3,6 +3,7 @@ import {Sort} from "../Components/Sort/Sort";
 import {Skeleton} from "../Components/Skeleton";
 import {PizzaBlock} from "../Components/PizzaBlock/PizzaBlock";
 import React, {useEffect, useState} from 'react';
+import s from './Home.module.scss'
 
 export const Home = () => {
     const [items, setItems] = useState([])
@@ -17,13 +18,13 @@ export const Home = () => {
             })
     }, [])
     return (
-        <div className="container">
-            <div className="content__top">
+        <div className={s.container}>
+            <div className={s.container__top}>
                 <Categories/>
                 <Sort/>
             </div>
-            <h2 className="content__title">Все пиццы</h2>
-            <div className="content__items">
+            <h2 className={s.content__title}>Все пиццы</h2>
+            <div className={s.content__items}>
                 {
                     isLoading
                         ? [...new Array(6)].map((_, index) => <Skeleton key={index}/>)
@@ -33,3 +34,19 @@ export const Home = () => {
         </div>
     )
 }
+
+
+// <div className="container">
+//     <div className="content__top">
+//         <Categories/>
+//         <Sort/>
+//     </div>
+//     <h2 className="content__title">Все пиццы</h2>
+//     <div className="content__items">
+//         {
+//             isLoading
+//                 ? [...new Array(6)].map((_, index) => <Skeleton key={index}/>)
+//                 : items.map((p => <PizzaBlock key={p.id} {...p}/>))
+//         }
+//     </div>
+// </div>

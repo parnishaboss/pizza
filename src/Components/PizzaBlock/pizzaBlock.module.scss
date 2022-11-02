@@ -1,8 +1,8 @@
 @import '../../scss/variables';
-.pizza-block-wrapper {
+.pizzaBlockWrapper {
   display: flex;
   justify-content: center;
-  .pizza-block {
+  .pizza__block {
     width: 280px;
     text-align: center;
     margin-bottom: 65px;
@@ -14,7 +14,7 @@
     &__title {
       font-size: 20px;
       font-weight: 900;
-      letter-spacing: 1%;
+      //letter-spacing: 1%;
       margin-bottom: 20px;
     }
 
@@ -39,7 +39,6 @@
           cursor: pointer;
           font-weight: 600;
           font-size: 14px;
-          @include noselect();
           &.active {
             background: #ffffff;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
