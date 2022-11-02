@@ -43,6 +43,11 @@ export const PizzaBlock = ({price,title,imageUrl,sizes,types}) => {
                         <i>2</i>
                     </button>
                 </div>
+                <button className={s.pizza__block__addButton}>
+                    <AddIcon/>
+                    <span>Добавить</span>
+                    <i>2</i>
+                </button>
             </div>
         </div>
 
