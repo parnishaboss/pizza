@@ -89,10 +89,33 @@
         &,span {
           color: #fff;
         }
+        i {
+          background-color: white;
+          color: $orange;
+        }
       }
 
       &:active {
         background-color: darken($orange, 8%);
+      }
+      i,
+      span {
+        transition: all $duration ease-in-out;
+      }
+      i {
+        display: inline-block;
+        border-radius: 30px;
+        background-color: $orange;
+        color: #fff;
+        font-weight: 600;
+        width: 22px;
+        height: 22px;
+        font-style: normal;
+        font-size: 13px;
+        line-height: 22px;
+        position: relative;
+        top: -1px;
+        left: 5px;
       }
 
     }

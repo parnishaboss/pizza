@@ -37,17 +37,18 @@ export const PizzaBlock = ({price,title,imageUrl,sizes,types}) => {
                 </div>
                 <div className={s.pizza__block__bottom}>
                     <div className={s.pizza__block__price}>от {price} ₽</div>
-                    <button className="button button--outline button--add">
+                    {/*<button className="button button--outline button--add">*/}
+                    {/*    <AddIcon/>*/}
+                    {/*    <span>Добавить</span>*/}
+                    {/*    <i>2</i>*/}
+                    {/*</button>*/}
+                    <button className={s.pizza__block__addButton}>
                         <AddIcon/>
                         <span>Добавить</span>
                         <i>2</i>
                     </button>
                 </div>
-                <button className={s.pizza__block__addButton}>
-                    <AddIcon/>
-                    <span>Добавить</span>
-                    <i>2</i>
-                </button>
+
             </div>
         </div>
 
